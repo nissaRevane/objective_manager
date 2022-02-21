@@ -70,6 +70,44 @@
   });
   0; //eaimeta@70e063a35619d71f0,"@glimmer/component/-private/ember-component-manager"eaimeta@70e063a35619d71f
 });
+;define("objective-manager-frontend/components/add-button", ["exports", "@ember/component", "@ember/template-factory", "@ember/service"], function (_exports, _component, _templateFactory, _service) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component",0,"@ember/service"eaimeta@70e063a35619d71f
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    <button class='js-add-objective-button' {{action "start"}}>
+    + Add objective
+  </button>
+  */
+  {
+    "id": "0cY/bBtX",
+    "block": "[[[11,\"button\"],[24,0,\"js-add-objective-button\"],[4,[38,0],[[30,0],\"start\"],null],[12],[1,\"\\n  + Add objective\\n\"],[13]],[],false,[\"action\"]]",
+    "moduleName": "objective-manager-frontend/components/add-button.hbs",
+    "isStrictMode": false
+  });
+
+  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, _component.default.extend({
+    store: (0, _service.inject)(),
+    actions: {
+      start() {
+        let newRecord = this.store.createRecord('objective', {
+          title: 'Undefined objective',
+          weight: 0
+        });
+        newRecord.save();
+      }
+
+    }
+  }));
+
+  _exports.default = _default;
+});
 ;define("objective-manager-frontend/components/welcome-page", ["exports", "ember-welcome-page/components/welcome-page.js"], function (_exports, _welcomePage) {
   "use strict";
 
@@ -544,8 +582,8 @@
   0; //eaimeta@70e063a35619d71f0,"@ember/template-factory"eaimeta@70e063a35619d71f
 
   var _default = (0, _templateFactory.createTemplateFactory)({
-    "id": "e/Rt5YYO",
-    "block": "[[[10,\"h1\"],[12],[1,\"Objective manager\"],[13],[1,\"\\n\\n\"],[10,\"table\"],[14,0,\"objective-table\"],[12],[1,\"\\n  \"],[10,\"thead\"],[12],[1,\"\\n    \"],[10,\"th\"],[12],[1,\"Title\"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\"Weight\"],[13],[1,\"\\n  \"],[13],[1,\"\\n\\n  \"],[10,\"tbody\"],[12],[1,\"\\n\"],[42,[28,[37,1],[[28,[37,1],[[30,1]],null]],null],null,[[[1,\"      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"td\"],[14,0,\"js-objective-title\"],[12],[1,[30,2,[\"title\"]]],[13],[1,\"\\n        \"],[10,\"td\"],[14,0,\"js-objective-weight\"],[12],[1,[30,2,[\"weight\"]]],[1,\"%\"],[13],[1,\"\\n      \"],[13],[1,\"\\n\"]],[2]],null],[1,\"  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\"]],[\"@model\",\"objective\"],false,[\"each\",\"-track-array\"]]",
+    "id": "x03D9HMb",
+    "block": "[[[10,\"h1\"],[12],[1,\"Objective manager\"],[13],[1,\"\\n\\n\"],[1,[34,0]],[1,\"\\n\\n\"],[10,\"table\"],[14,0,\"objective-table\"],[12],[1,\"\\n  \"],[10,\"thead\"],[12],[1,\"\\n    \"],[10,\"th\"],[12],[1,\"Title\"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\"Weight\"],[13],[1,\"\\n  \"],[13],[1,\"\\n\\n  \"],[10,\"tbody\"],[12],[1,\"\\n\"],[42,[28,[37,2],[[28,[37,2],[[30,1]],null]],null],null,[[[1,\"      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"td\"],[14,0,\"js-objective-title\"],[12],[1,[30,2,[\"title\"]]],[13],[1,\"\\n        \"],[10,\"td\"],[14,0,\"js-objective-weight\"],[12],[1,[30,2,[\"weight\"]]],[1,\"%\"],[13],[1,\"\\n      \"],[13],[1,\"\\n\"]],[2]],null],[1,\"  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\"]],[\"@model\",\"objective\"],false,[\"add-button\",\"each\",\"-track-array\"]]",
     "moduleName": "objective-manager-frontend/templates/application.hbs",
     "isStrictMode": false
   });
@@ -631,7 +669,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("objective-manager-frontend/app")["default"].create({"name":"objective-manager-frontend","version":"0.0.0+0b531ccf"});
+            require("objective-manager-frontend/app")["default"].create({"name":"objective-manager-frontend","version":"0.0.0+7bba1b0a"});
           }
         
 //# sourceMappingURL=objective-manager-frontend.map

@@ -7,10 +7,33 @@ define("objective-manager-frontend/tests/acceptance/application-test", ["qunit",
 
   (0, _qunit.module)('Acceptance | application', function (hooks) {
     (0, _emberQunit.setupApplicationTest)(hooks);
-    (0, _qunit.test)('visit main page', async function (assert) {
+    hooks.beforeEach(function () {
       (0, _emberDataFactoryGuy.mockFindAll)('objective', 1);
+    });
+    (0, _qunit.test)('visit main page', async function (assert) {
       await (0, _testHelpers.visit)('/');
       assert.equal((0, _testHelpers.currentURL)(), '/');
+      assert.dom('js-objective-title').hasText('First objective');
+      assert.dom('js-objective-weight').hasText('50');
+    });
+    (0, _qunit.test)('can create new objectives', async function (assert) {
+      await (0, _testHelpers.visit)('/');
+      const addObjectiveButton = '.js-add-objective-button';
+      assert.dom(addObjectiveButton).exists({
+        count: 1
+      });
+      await click(addObjectiveButton);
+      (0, _emberDataFactoryGuy.mockCreate)('objective').match({
+        title: 'Undefined objective',
+        weight: 0
+      }).returns({
+        attrs: {
+          id: 66,
+          title: 'Undefined objective',
+          weight: 0
+        }
+      });
+      (0, _emberDataFactoryGuy.mockReload)('objective', 66);
     });
   });
 });
@@ -24,6 +47,46 @@ define("objective-manager-frontend/tests/factories/objective", ["ember-data-fact
       title: 'First objective',
       weight: 50
     }
+  });
+});
+define("objective-manager-frontend/tests/integration/components/add-button-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers"], function (_templateFactory, _qunit, _emberQunit, _testHelpers) {
+  "use strict";
+
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
+
+  (0, _qunit.module)('Integration | Component | add-button', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+    (0, _qunit.test)('it renders', async function (assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+      await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
+      /*
+        <AddButton />
+      */
+      {
+        "id": "QnS8pfNR",
+        "block": "[[[8,[39,0],null,null,null]],[],false,[\"add-button\"]]",
+        "moduleName": "(unknown template module)",
+        "isStrictMode": false
+      }));
+      assert.dom(this.element).hasText(''); // Template block usage:
+
+      await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
+      /*
+        
+            <AddButton>
+              template block text
+            </AddButton>
+          
+      */
+      {
+        "id": "65t8OnDc",
+        "block": "[[[1,\"\\n      \"],[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n        template block text\\n      \"]],[]]]]],[1,\"\\n    \"]],[],false,[\"add-button\"]]",
+        "moduleName": "(unknown template module)",
+        "isStrictMode": false
+      }));
+      assert.dom(this.element).hasText('template block text');
+    });
   });
 });
 define("objective-manager-frontend/tests/test-helper", ["objective-manager-frontend/app", "objective-manager-frontend/config/environment", "qunit", "@ember/test-helpers", "qunit-dom", "ember-qunit"], function (_app, _environment, QUnit, _testHelpers, _qunitDom, _emberQunit) {
@@ -46,6 +109,20 @@ define("objective-manager-frontend/tests/unit/adapters/application-test", ["quni
     (0, _qunit.test)('it exists', function (assert) {
       let adapter = this.owner.lookup('adapter:application');
       assert.ok(adapter);
+    });
+  });
+});
+define("objective-manager-frontend/tests/unit/controllers/application-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
+
+  (0, _qunit.module)('Unit | Controller | application', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks); // TODO: Replace this with your real tests.
+
+    (0, _qunit.test)('it exists', function (assert) {
+      let controller = this.owner.lookup('controller:application');
+      assert.ok(controller);
     });
   });
 });
