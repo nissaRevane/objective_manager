@@ -11,8 +11,22 @@
   <tbody>
     {{#each @model as |objective|}}
       <tr>
-        <td class='js-objective-title'>{{objective.title}}</td>
-        <td class='js-objective-weight'>{{objective.weight}}%</td>
+        <td class='js-objective-title'>
+          {{property-editor
+            inputType='text'
+            inputName='title'
+            inputValue=objective.title
+            recordId=objective.id
+          }}
+        </td>
+        <td class='js-objective-weight'>
+          {{property-editor
+            inputType='number'
+            inputName='weight'
+            inputValue=objective.weight
+            recordId=objective.id
+          }}
+        </td>
       </tr>
     {{/each}}
   </tbody>

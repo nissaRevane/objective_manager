@@ -81,13 +81,13 @@
 
   const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
   /*
-    <button class='js-add-objective-button' {{action "start"}}>
+    <button class='js-add-objective-button' type="button" {{action "start"}}>
     + Add objective
   </button>
   */
   {
-    "id": "0cY/bBtX",
-    "block": "[[[11,\"button\"],[24,0,\"js-add-objective-button\"],[4,[38,0],[[30,0],\"start\"],null],[12],[1,\"\\n  + Add objective\\n\"],[13]],[],false,[\"action\"]]",
+    "id": "+DcAbuLM",
+    "block": "[[[11,\"button\"],[24,0,\"js-add-objective-button\"],[24,4,\"button\"],[4,[38,0],[[30,0],\"start\"],null],[12],[1,\"\\n  + Add objective\\n\"],[13]],[],false,[\"action\"]]",
     "moduleName": "objective-manager-frontend/components/add-button.hbs",
     "isStrictMode": false
   });
@@ -101,6 +101,53 @@
           weight: 0
         });
         newRecord.save();
+      }
+
+    }
+  }));
+
+  _exports.default = _default;
+});
+;define("objective-manager-frontend/components/property-editor", ["exports", "@ember/component", "@ember/template-factory", "@ember/service", "@ember/object"], function (_exports, _component, _templateFactory, _service, _object) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component",0,"@ember/service",0,"@ember/object"eaimeta@70e063a35619d71f
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    <input
+    id="input-{{@inputName}}"
+    type={{@inputType}}
+    name='{{@inputName}}'
+    value={{@inputValue}}
+  >
+  <button
+    class='js-update-objective-button'
+    type="button"
+    {{action "update" @recordId @inputName}}
+  >
+    Save
+  </button>
+  */
+  {
+    "id": "VtrGSumv",
+    "block": "[[[10,\"input\"],[15,1,[29,[\"input-\",[30,1]]]],[15,3,[29,[[30,1]]]],[15,2,[30,3]],[15,4,[30,2]],[12],[13],[1,\"\\n\"],[11,\"button\"],[24,0,\"js-update-objective-button\"],[24,4,\"button\"],[4,[38,0],[[30,0],\"update\",[30,4],[30,1]],null],[12],[1,\"\\n  Save\\n\"],[13]],[\"@inputName\",\"@inputType\",\"@inputValue\",\"@recordId\"],false,[\"action\"]]",
+    "moduleName": "objective-manager-frontend/components/property-editor.hbs",
+    "isStrictMode": false
+  });
+
+  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, _component.default.extend({
+    store: (0, _service.inject)(),
+    actions: {
+      update(recordId, name) {
+        this.store.findRecord('objective', recordId).then(function (objective) {
+          objective[name] = 'Fail to get your value';
+          objective.save();
+        });
       }
 
     }
@@ -582,8 +629,8 @@
   0; //eaimeta@70e063a35619d71f0,"@ember/template-factory"eaimeta@70e063a35619d71f
 
   var _default = (0, _templateFactory.createTemplateFactory)({
-    "id": "x03D9HMb",
-    "block": "[[[10,\"h1\"],[12],[1,\"Objective manager\"],[13],[1,\"\\n\\n\"],[1,[34,0]],[1,\"\\n\\n\"],[10,\"table\"],[14,0,\"objective-table\"],[12],[1,\"\\n  \"],[10,\"thead\"],[12],[1,\"\\n    \"],[10,\"th\"],[12],[1,\"Title\"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\"Weight\"],[13],[1,\"\\n  \"],[13],[1,\"\\n\\n  \"],[10,\"tbody\"],[12],[1,\"\\n\"],[42,[28,[37,2],[[28,[37,2],[[30,1]],null]],null],null,[[[1,\"      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"td\"],[14,0,\"js-objective-title\"],[12],[1,[30,2,[\"title\"]]],[13],[1,\"\\n        \"],[10,\"td\"],[14,0,\"js-objective-weight\"],[12],[1,[30,2,[\"weight\"]]],[1,\"%\"],[13],[1,\"\\n      \"],[13],[1,\"\\n\"]],[2]],null],[1,\"  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\"]],[\"@model\",\"objective\"],false,[\"add-button\",\"each\",\"-track-array\"]]",
+    "id": "BlW5ipzr",
+    "block": "[[[10,\"h1\"],[12],[1,\"Objective manager\"],[13],[1,\"\\n\\n\"],[1,[34,0]],[1,\"\\n\\n\"],[10,\"table\"],[14,0,\"objective-table\"],[12],[1,\"\\n  \"],[10,\"thead\"],[12],[1,\"\\n    \"],[10,\"th\"],[12],[1,\"Title\"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\"Weight\"],[13],[1,\"\\n  \"],[13],[1,\"\\n\\n  \"],[10,\"tbody\"],[12],[1,\"\\n\"],[42,[28,[37,2],[[28,[37,2],[[30,1]],null]],null],null,[[[1,\"      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"td\"],[14,0,\"js-objective-title\"],[12],[1,\"\\n          \"],[1,[28,[35,3],null,[[\"inputType\",\"inputName\",\"inputValue\",\"recordId\"],[\"text\",\"title\",[30,2,[\"title\"]],[30,2,[\"id\"]]]]]],[1,\"\\n        \"],[13],[1,\"\\n        \"],[10,\"td\"],[14,0,\"js-objective-weight\"],[12],[1,\"\\n          \"],[1,[28,[35,3],null,[[\"inputType\",\"inputName\",\"inputValue\",\"recordId\"],[\"number\",\"weight\",[30,2,[\"weight\"]],[30,2,[\"id\"]]]]]],[1,\"\\n        \"],[13],[1,\"\\n      \"],[13],[1,\"\\n\"]],[2]],null],[1,\"  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\"]],[\"@model\",\"objective\"],false,[\"add-button\",\"each\",\"-track-array\",\"property-editor\"]]",
     "moduleName": "objective-manager-frontend/templates/application.hbs",
     "isStrictMode": false
   });

@@ -1063,3 +1063,2005 @@ Processing by ObjectivesController#index as */*
 Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 863)
 
 
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  [1m[36mObjective Pluck (0.6ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  [1m[36mObjective Pluck (0.7ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mObjective Pluck (0.4ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  [1m[36mObjective Create (0.5ms)[0m  [1m[32mINSERT INTO "objectives" ("title", "weight", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Be more productive"], ["weight", 40], ["created_at", "2022-02-21 09:32:21.076921"], ["updated_at", "2022-02-21 09:32:21.076921"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mObjective Pluck (0.4ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  [1m[36mObjective Pluck (0.6ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  [1m[36mObjective Pluck (0.4ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mObjective Pluck (0.6ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  [1m[36mObjective Pluck (0.5ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" ORDER BY "objectives"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mObjective Destroy (0.4ms)[0m  [1m[31mDELETE FROM "objectives" WHERE "objectives"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mObjective Pluck (0.6ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  [1m[36mObjective Pluck (0.5ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+Started GET "/objectives" for ::1 at 2022-02-21 10:40:38 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 42ms (Views: 12.7ms | ActiveRecord: 5.6ms | Allocations: 19542)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:40:40 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 880)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:40:41 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 877)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:41:23 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 877)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:41:37 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:41:50 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:42:30 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 877)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:42:40 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:43:35 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:44:27 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:45:09 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:45:19 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:45:23 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:45:48 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.8ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.8ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:45:52 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:46:13 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:46:19 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:46:43 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:46:50 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:47:03 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 873)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 10:47:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 10:48:19 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:55:35 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (1.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 12.1ms | Allocations: 3144)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:55:37 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 1024)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 10:55:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 10:55:43 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 862)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 10:55:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 10:56:12 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:56:21 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:56:23 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (1.0ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.0ms | Allocations: 1031)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 10:56:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 10:56:31 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:56:35 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:56:40 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:58:08 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:58:13 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:58:46 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 10:59:41 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 938)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 10:59:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:00:18 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.8ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.8ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:00:24 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:00:27 +0100
+Started GET "/objectives" for ::1 at 2022-02-21 11:00:27 +0100
+Processing by ObjectivesController#index as */*
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[36mObjective Load (12.1ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 4.0ms | ActiveRecord: 12.1ms | Allocations: 7144)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:01:47 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:01:53 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:02:24 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:02:29 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.8ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.8ms | Allocations: 1029)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:02:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:03:03 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.9ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.9ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:03:36 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:03:40 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.7ms | Allocations: 864)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:04:00 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:04:14 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:04:33 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:04:53 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:05:01 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (1.0ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.0ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:06:12 +0100
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:06:12 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 900)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:06:45 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.5ms | Allocations: 862)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:06:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:07:19 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:07:23 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:07:56 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (1.1ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.1ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:08:02 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:08:23 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:08:29 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:08:49 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:08:54 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.8ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.8ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:09:04 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:09:18 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:09:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:09:59 +0100
+Started GET "/objectives" for ::1 at 2022-02-21 11:09:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1472)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:11:35 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:11:54 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:12:25 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:12:36 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (1.0ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.0ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:13:12 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.9ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.9ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:13:26 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.8ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:13:33 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 863)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:13:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:15:39 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:15:44 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:16:03 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.8ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.8ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:16:12 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:16:17 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:16:31 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (1.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.2ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:16:38 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:17:19 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms | Allocations: 864)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:17:47 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.9ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.9ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:18:14 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:18:20 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:18:37 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:18:51 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.7ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:21:47 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.7ms | Allocations: 864)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:21:53 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:22:20 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:22:31 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:22:52 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.7ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:23:10 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:23:25 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:23:40 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:23:57 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:24:12 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:24:21 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.7ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:24:34 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.7ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:24:49 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:26:42 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:26:48 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:27:16 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:27:22 +0100
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:27:22 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.6ms | Allocations: 907)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:29:39 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:29:54 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:29:59 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:30:01 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:30:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:30:20 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:30:37 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:31:22 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:31:34 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:31:35 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.5ms | Allocations: 873)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:31:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:31:37 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 25ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 2623)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:31:37 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"A new Title", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.2ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Update (0.5ms)[0m  [1m[33mUPDATE "objectives" SET "title" = $1, "updated_at" = $2 WHERE "objectives"."id" = $3[0m  [["title", "A new Title"], ["updated_at", "2022-02-21 10:31:37.993455"], ["id", 3]]
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 3.5ms | Allocations: 3290)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:31:42 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.7ms | Allocations: 1029)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:31:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:34:24 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:34:32 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:34:39 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 864)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:34:40 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.8ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms | Allocations: 863)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:34:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:34:56 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.7ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:35:11 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:35:12 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 1037)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:35:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:35:13 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 627)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:35:13 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"A new Title", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.3ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 1.3ms | Allocations: 2102)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:35:15 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:35:15 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.3ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Update (0.4ms)[0m  [1m[33mUPDATE "objectives" SET "title" = $1, "updated_at" = $2 WHERE "objectives"."id" = $3[0m  [["title", "0"], ["updated_at", "2022-02-21 10:35:15.287553"], ["id", 3]]
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 3.8ms | Allocations: 2702)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:35:19 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:35:19 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.3ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 2098)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:35:30 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:35:30 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.3ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 2101)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:35:31 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:35:31 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.3ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 2101)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:35:31 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:35:31 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.3ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 1.1ms | Allocations: 2098)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:35:31 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:35:31 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.3ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 2098)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:35:41 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:35:41 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.2ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 2098)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:35:43 +0100
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:35:43 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms | Allocations: 915)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:36:31 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.8ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.8ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:36:32 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:36:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:36:34 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 627)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:36:34 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.2ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 2101)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:36:38 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:36:38 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.3ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 1.0ms | Allocations: 2098)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:36:40 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1021)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:36:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:37:55 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 627)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:37:55 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.2ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 2098)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:37:55 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:37:55 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.3ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 2098)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:37:56 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:37:56 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.2ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 2098)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:37:56 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:37:56 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.2ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 2098)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:37:56 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:37:56 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.4ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.9ms | Allocations: 2098)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:37:56 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:37:56 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.3ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 2098)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:37:56 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:37:56 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.3ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 2099)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:37:56 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:37:56 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.2ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 2098)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:38:13 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.8ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.8ms | Allocations: 863)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:38:16 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 11:39:44 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"0", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (3.7ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 15ms (Views: 0.9ms | ActiveRecord: 4.7ms | Allocations: 2098)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:41:13 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:41:42 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:43:11 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:44:59 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:45:02 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 864)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:45:50 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.8ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.8ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:46:25 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.8ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.8ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:46:48 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.5ms | Allocations: 873)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:46:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:46:56 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:47:30 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:51:29 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:51:52 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:52:00 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:52:27 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:52:57 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.6ms | Allocations: 1029)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:52:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:53:05 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:53:18 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:53:26 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:53:29 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:53:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:53:34 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:53:35 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1034)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:53:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:53:51 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:54:02 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:54:06 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.7ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:54:13 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:54:26 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:54:28 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 873)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:54:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives/2" for ::1 at 2022-02-21 11:54:36 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 627)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:54:38 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 628)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:54:40 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 628)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:54:41 +0100
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:54:41 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 997)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:55:04 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.8ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.8ms | Allocations: 862)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:55:10 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 628)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:55:21 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.7ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:55:23 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 1029)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:55:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:56:07 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:56:16 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:56:17 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.8ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.8ms | Allocations: 863)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:56:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:56:22 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 627)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:56:22 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 628)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:56:22 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 628)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:56:24 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:56:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 11:56:36 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:56:37 +0100
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:56:37 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 901)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:56:47 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 627)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:56:48 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 628)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:56:48 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 628)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:56:48 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 628)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:56:50 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 628)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:56:50 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 628)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 11:56:50 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 628)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:59:37 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 11:59:37 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.8ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.8ms | Allocations: 1031)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 11:59:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives" for ::1 at 2022-02-21 12:00:09 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.6ms | Allocations: 862)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 12:00:23 +0100
+Started GET "/favicon.ico" for ::1 at 2022-02-21 12:00:23 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 908)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives/3" for ::1 at 2022-02-21 12:00:25 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 627)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 12:00:25 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"I have failed to get the current value", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.3ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Update (0.4ms)[0m  [1m[33mUPDATE "objectives" SET "title" = $1, "updated_at" = $2 WHERE "objectives"."id" = $3[0m  [["title", "I have failed to get the current value"], ["updated_at", "2022-02-21 11:00:25.607197"], ["id", 3]]
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 3.6ms | Allocations: 2698)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 12:00:27 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 629)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 12:00:27 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"I have failed to get the current value", "weight"=>nil}, "id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.4ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 422 Unprocessable Entity in 13ms (Views: 5.7ms | ActiveRecord: 1.0ms | Allocations: 3491)
+
+
+Started GET "/objectives/3" for ::1 at 2022-02-21 12:00:28 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 629)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 12:00:28 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"I have failed to get the current value", "weight"=>nil}, "id"=>"3"}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.2ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 422 Unprocessable Entity in 7ms (Views: 0.7ms | ActiveRecord: 0.8ms | Allocations: 2333)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 12:01:04 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 864)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 12:01:05 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (1.0ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.0ms | Allocations: 1032)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-02-21 12:01:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/objectives/3" for ::1 at 2022-02-21 12:01:08 +0100
+Processing by ObjectivesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 628)
+
+
+Started PUT "/objectives/3" for ::1 at 2022-02-21 12:01:08 +0100
+Processing by ObjectivesController#update as */*
+  Parameters: {"objective"=>{"title"=>"Fail to get your value", "weight"=>0}, "id"=>"3"}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/objectives_controller.rb:44:in `set_objective'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Pluck (0.2ms)[0m  [1m[34mSELECT "objectives"."weight" FROM "objectives"[0m
+  ↳ app/models/objective.rb:13:in `objective_total_weight'
+  [1m[36mObjective Update (0.4ms)[0m  [1m[33mUPDATE "objectives" SET "title" = $1, "updated_at" = $2 WHERE "objectives"."id" = $3[0m  [["title", "Fail to get your value"], ["updated_at", "2022-02-21 11:01:08.503774"], ["id", 3]]
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/objectives_controller.rb:29:in `update'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 3.3ms | Allocations: 2700)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 12:02:08 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 12:02:14 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 12:04:12 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 12:04:20 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 12:04:45 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 12:04:53 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/objectives" for ::1 at 2022-02-21 12:05:29 +0100
+Processing by ObjectivesController#index as */*
+  [1m[36mObjective Load (0.6ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+  ↳ app/controllers/objectives_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.6ms | Allocations: 863)
+
+

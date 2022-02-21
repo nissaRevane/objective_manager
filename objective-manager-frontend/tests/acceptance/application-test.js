@@ -1,12 +1,12 @@
 import { module, test } from 'qunit';
 import { visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
-import { mockFindAll, mockCreate, mockReload } from 'ember-data-factory-guy';
+import { mockFindAll, mockCreate, mockReload, mockUpdate } from 'ember-data-factory-guy';
 
 module('Acceptance | application', function (hooks) {
   setupApplicationTest(hooks);
 
-  hooks.beforeEach(function() {
+  hooks.beforeEach(function () {
     mockFindAll('objective', 1);
   });
 
@@ -21,18 +21,33 @@ module('Acceptance | application', function (hooks) {
   test('can create new objectives', async function (assert) {
     await visit('/');
 
-    const addObjectiveButton = '.js-add-objective-button'
+    const addObjectiveButton = '.js-add-objective-button';
 
     assert.dom(addObjectiveButton).exists({ count: 1 });
     await click(addObjectiveButton);
 
-    mockCreate('objective').match({
-      title: 'Undefined objective',
-      weight: 0
-    }).returns({
-      attrs: { id: 66, title: 'Undefined objective', weight: 0 }
-    });
+    mockCreate('objective')
+      .match({
+        title: 'Undefined objective',
+        weight: 0,
+      })
+      .returns({
+        attrs: { id: 66, title: 'Undefined objective', weight: 0 },
+      });
 
     mockReload('objective', 66);
+  });
+
+  test('can update objectives', async function (assert) {
+    await visit('/');
+
+    const addObjectiveButton = '.js-update-objective-button';
+
+    assert.dom(addObjectiveButton).exists({ count: 2 });
+    await click(addObjectiveButton);
+
+    mockUpdate('objective')
+
+    // [...]
   });
 });

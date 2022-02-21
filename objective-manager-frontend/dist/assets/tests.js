@@ -35,6 +35,15 @@ define("objective-manager-frontend/tests/acceptance/application-test", ["qunit",
       });
       (0, _emberDataFactoryGuy.mockReload)('objective', 66);
     });
+    (0, _qunit.test)('can update objectives', async function (assert) {
+      await (0, _testHelpers.visit)('/');
+      const addObjectiveButton = '.js-update-objective-button';
+      assert.dom(addObjectiveButton).exists({
+        count: 2
+      });
+      await click(addObjectiveButton);
+      (0, _emberDataFactoryGuy.mockUpdate)('objective'); // [...]
+    });
   });
 });
 define("objective-manager-frontend/tests/factories/objective", ["ember-data-factory-guy"], function (_emberDataFactoryGuy) {
@@ -82,6 +91,86 @@ define("objective-manager-frontend/tests/integration/components/add-button-test"
       {
         "id": "65t8OnDc",
         "block": "[[[1,\"\\n      \"],[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n        template block text\\n      \"]],[]]]]],[1,\"\\n    \"]],[],false,[\"add-button\"]]",
+        "moduleName": "(unknown template module)",
+        "isStrictMode": false
+      }));
+      assert.dom(this.element).hasText('template block text');
+    });
+  });
+});
+define("objective-manager-frontend/tests/integration/components/property-editor-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers"], function (_templateFactory, _qunit, _emberQunit, _testHelpers) {
+  "use strict";
+
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
+
+  (0, _qunit.module)('Integration | Component | property-editor', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+    (0, _qunit.test)('it renders', async function (assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+      await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
+      /*
+        <PropertyEditor />
+      */
+      {
+        "id": "710bW6UC",
+        "block": "[[[8,[39,0],null,null,null]],[],false,[\"property-editor\"]]",
+        "moduleName": "(unknown template module)",
+        "isStrictMode": false
+      }));
+      assert.dom(this.element).hasText(''); // Template block usage:
+
+      await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
+      /*
+        
+            <PropertyEditor>
+              template block text
+            </PropertyEditor>
+          
+      */
+      {
+        "id": "A/JlvIL3",
+        "block": "[[[1,\"\\n      \"],[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n        template block text\\n      \"]],[]]]]],[1,\"\\n    \"]],[],false,[\"property-editor\"]]",
+        "moduleName": "(unknown template module)",
+        "isStrictMode": false
+      }));
+      assert.dom(this.element).hasText('template block text');
+    });
+  });
+});
+define("objective-manager-frontend/tests/integration/components/update-button-test", ["@ember/template-factory", "qunit", "ember-qunit", "@ember/test-helpers"], function (_templateFactory, _qunit, _emberQunit, _testHelpers) {
+  "use strict";
+
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
+
+  (0, _qunit.module)('Integration | Component | update-button', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+    (0, _qunit.test)('it renders', async function (assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+      await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
+      /*
+        <UpdateButton />
+      */
+      {
+        "id": "D1B8Z4Kr",
+        "block": "[[[8,[39,0],null,null,null]],[],false,[\"update-button\"]]",
+        "moduleName": "(unknown template module)",
+        "isStrictMode": false
+      }));
+      assert.dom(this.element).hasText(''); // Template block usage:
+
+      await (0, _testHelpers.render)((0, _templateFactory.createTemplateFactory)(
+      /*
+        
+            <UpdateButton>
+              template block text
+            </UpdateButton>
+          
+      */
+      {
+        "id": "lC5e27WB",
+        "block": "[[[1,\"\\n      \"],[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n        template block text\\n      \"]],[]]]]],[1,\"\\n    \"]],[],false,[\"update-button\"]]",
         "moduleName": "(unknown template module)",
         "isStrictMode": false
       }));
