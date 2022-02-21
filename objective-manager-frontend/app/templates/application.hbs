@@ -1,7 +1,17 @@
-{{page-title "ObjectiveManagerFrontend"}}
+<h1>Objective manager</h1>
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<table class='objective-table'>
+  <thead>
+    <th>Title</th>
+    <th>Weight</th>
+  </thead>
 
-{{outlet}}
+  <tbody>
+    {{#each @model as |objective|}}
+      <tr>
+        <td class='js-objective-title'>{{objective.title}}</td>
+        <td class='js-objective-weight'>{{objective.weight}}%</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,0 +1,209 @@
+  [1m[35m (53.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "objective_manager_api_test"[0m
+  [1m[35m (127.7ms)[0m  [1m[35mCREATE DATABASE "objective_manager_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "objectives" CASCADE[0m
+  [1m[35m (16.9ms)[0m  [1m[35mCREATE TABLE "objectives" ("id" bigserial primary key, "title" character varying, "weight" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220221071009)[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2022-02-21 07:21:09.428456"], ["updated_at", "2022-02-21 07:21:09.428456"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "1326c480c029162eaced6a331ea0708ae74e09a2"], ["created_at", "2022-02-21 07:21:09.435680"], ["updated_at", "2022-02-21 07:21:09.435680"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "objectives" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[31mDELETE FROM "objectives";
+INSERT INTO "objectives" ("id", "title", "weight", "created_at", "updated_at") VALUES (980190962, 'objectiveOne', 10, '2022-02-21 07:21:09.547244', '2022-02-21 07:21:09.547244'), (298486374, 'objectiveTwo', 20, '2022-02-21 07:21:09.547244', '2022-02-21 07:21:09.547244')[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "objectives" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.8ms)[0m  [1m[35mdo $$
+  declare r record;
+BEGIN
+FOR r IN (
+  SELECT FORMAT(
+    'UPDATE pg_constraint SET convalidated=false WHERE conname = ''%I''; ALTER TABLE %I VALIDATE CONSTRAINT %I;',
+    constraint_name,
+    table_name,
+    constraint_name
+  ) AS constraint_check
+  FROM information_schema.table_constraints WHERE constraint_type = 'FOREIGN KEY'
+)
+  LOOP
+    EXECUTE (r.constraint_check);
+  END LOOP;
+END;
+$$;
+[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------
+ObjectivesControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/objectives" for 127.0.0.1 at 2022-02-21 08:21:09 +0100
+Processing by ObjectivesController#index as JSON
+  Parameters: {"objective"=>{}}
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+Completed 200 OK in 16ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 17067)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+ObjectivesControllerTest: test_should_create_objective
+------------------------------------------------------
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mObjective Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "objectives"[0m
+Started POST "/objectives" for 127.0.0.1 at 2022-02-21 08:21:09 +0100
+Processing by ObjectivesController#create as JSON
+  Parameters: {"objective"=>{"title"=>"objectiveOne", "weight"=>10}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mObjective Create (0.3ms)[0m  [1m[32mINSERT INTO "objectives" ("title", "weight", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "objectiveOne"], ["weight", 10], ["created_at", "2022-02-21 07:21:09.833743"], ["updated_at", "2022-02-21 07:21:09.833743"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1144)
+  [1m[36mObjective Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "objectives"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------
+ObjectivesControllerTest: test_should_destroy_objective
+-------------------------------------------------------
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mObjective Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "objectives"[0m
+Started DELETE "/objectives/980190962" for 127.0.0.1 at 2022-02-21 08:21:09 +0100
+Processing by ObjectivesController#destroy as JSON
+  Parameters: {"id"=>"980190962", "objective"=>{}}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mObjective Destroy (0.2ms)[0m  [1m[31mDELETE FROM "objectives" WHERE "objectives"."id" = $1[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 2ms (ActiveRecord: 0.7ms | Allocations: 586)
+  [1m[36mObjective Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "objectives"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+ObjectivesControllerTest: test_should_show_objective
+----------------------------------------------------
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/objectives/980190962" for 127.0.0.1 at 2022-02-21 08:21:09 +0100
+Processing by ObjectivesController#show as JSON
+  Parameters: {"id"=>"980190962", "objective"=>{}}
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 274)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+ObjectivesControllerTest: test_should_update_objective
+------------------------------------------------------
+  [1m[36mObjective Load (0.1ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/objectives/980190962" for 127.0.0.1 at 2022-02-21 08:21:09 +0100
+Processing by ObjectivesController#update as JSON
+  Parameters: {"objective"=>{"title"=>"objectiveOne", "weight"=>10}, "id"=>"980190962"}
+  [1m[36mObjective Load (0.1ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 516)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "objectives" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[31mDELETE FROM "objectives";
+INSERT INTO "objectives" ("id", "title", "weight", "created_at", "updated_at") VALUES (980190962, 'objectiveOne', 10, '2022-02-21 07:26:09.601045', '2022-02-21 07:26:09.601045'), (298486374, 'objectiveTwo', 20, '2022-02-21 07:26:09.601045', '2022-02-21 07:26:09.601045')[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "objectives" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.7ms)[0m  [1m[35mdo $$
+  declare r record;
+BEGIN
+FOR r IN (
+  SELECT FORMAT(
+    'UPDATE pg_constraint SET convalidated=false WHERE conname = ''%I''; ALTER TABLE %I VALIDATE CONSTRAINT %I;',
+    constraint_name,
+    table_name,
+    constraint_name
+  ) AS constraint_check
+  FROM information_schema.table_constraints WHERE constraint_type = 'FOREIGN KEY'
+)
+  LOOP
+    EXECUTE (r.constraint_check);
+  END LOOP;
+END;
+$$;
+[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------
+ObjectivesControllerTest: test_should_destroy_objective
+-------------------------------------------------------
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mObjective Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "objectives"[0m
+Started DELETE "/objectives/980190962" for 127.0.0.1 at 2022-02-21 08:26:09 +0100
+Processing by ObjectivesController#destroy as JSON
+  Parameters: {"id"=>"980190962", "objective"=>{}}
+  [1m[36mObjective Load (0.4ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mObjective Destroy (0.4ms)[0m  [1m[31mDELETE FROM "objectives" WHERE "objectives"."id" = $1[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 36ms (ActiveRecord: 1.3ms | Allocations: 15573)
+  [1m[36mObjective Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "objectives"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+ObjectivesControllerTest: test_should_update_objective
+------------------------------------------------------
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/objectives/980190962" for 127.0.0.1 at 2022-02-21 08:26:09 +0100
+Processing by ObjectivesController#update as JSON
+  Parameters: {"objective"=>{"title"=>"objectiveOne", "weight"=>10}, "id"=>"980190962"}
+  [1m[36mObjective Load (0.5ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 1232)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------
+ObjectivesControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/objectives" for 127.0.0.1 at 2022-02-21 08:26:10 +0100
+Processing by ObjectivesController#index as JSON
+  Parameters: {"objective"=>{}}
+  [1m[36mObjective Load (0.7ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives"[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms | Allocations: 342)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+ObjectivesControllerTest: test_should_create_objective
+------------------------------------------------------
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mObjective Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "objectives"[0m
+Started POST "/objectives" for 127.0.0.1 at 2022-02-21 08:26:10 +0100
+Processing by ObjectivesController#create as JSON
+  Parameters: {"objective"=>{"title"=>"objectiveOne", "weight"=>10}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mObjective Create (0.6ms)[0m  [1m[32mINSERT INTO "objectives" ("title", "weight", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "objectiveOne"], ["weight", 10], ["created_at", "2022-02-21 07:26:10.028634"], ["updated_at", "2022-02-21 07:26:10.028634"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 5ms (Views: 1.0ms | ActiveRecord: 1.1ms | Allocations: 828)
+  [1m[36mObjective Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "objectives"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+ObjectivesControllerTest: test_should_show_objective
+----------------------------------------------------
+  [1m[36mObjective Load (0.2ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/objectives/980190962" for 127.0.0.1 at 2022-02-21 08:26:10 +0100
+Processing by ObjectivesController#show as JSON
+  Parameters: {"id"=>"980190962", "objective"=>{}}
+  [1m[36mObjective Load (0.3ms)[0m  [1m[34mSELECT "objectives".* FROM "objectives" WHERE "objectives"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 274)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
