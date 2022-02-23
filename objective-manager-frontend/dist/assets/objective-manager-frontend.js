@@ -108,34 +108,64 @@
 
   _exports.default = _default;
 });
-;define("objective-manager-frontend/components/property-editor", ["exports", "@ember/component", "@ember/template-factory", "@ember/service", "@ember/object"], function (_exports, _component, _templateFactory, _service, _object) {
+;define("objective-manager-frontend/components/delete-button", ["exports", "@ember/component", "@ember/template-factory", "@ember/service"], function (_exports, _component, _templateFactory, _service) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
     value: true
   });
   _exports.default = void 0;
-  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component",0,"@ember/service",0,"@ember/object"eaimeta@70e063a35619d71f
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component",0,"@ember/service"eaimeta@70e063a35619d71f
 
   const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
   /*
-    <input
-    id="input-{{@inputName}}"
-    type={{@inputType}}
-    name='{{@inputName}}'
-    value={{@inputValue}}
-  >
+    <button class='js-delete-objective-button' type="button" {{action "delete" @recordId}}>
+    Delete
+  </button>
+  */
+  {
+    "id": "wmC5wBlL",
+    "block": "[[[11,\"button\"],[24,0,\"js-delete-objective-button\"],[24,4,\"button\"],[4,[38,0],[[30,0],\"delete\",[30,1]],null],[12],[1,\"\\n  Delete\\n\"],[13]],[\"@recordId\"],false,[\"action\"]]",
+    "moduleName": "objective-manager-frontend/components/delete-button.hbs",
+    "isStrictMode": false
+  });
+
+  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, _component.default.extend({
+    store: (0, _service.inject)(),
+    actions: {
+      delete(recordId) {
+        const objective = this.store.peekRecord('objective', recordId);
+        objective.destroyRecord();
+      }
+
+    }
+  }));
+
+  _exports.default = _default;
+});
+;define("objective-manager-frontend/components/property-editor", ["exports", "@ember/component", "@ember/template-factory", "@ember/service"], function (_exports, _component, _templateFactory, _service) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component",0,"@ember/service"eaimeta@70e063a35619d71f
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    {{input type=@inputType name=@inputName value=@inputValue}}
   <button
     class='js-update-objective-button'
     type="button"
-    {{action "update" @recordId @inputName}}
+    {{action "update" @recordId @inputName @inputValue}}
   >
     Save
   </button>
   */
   {
-    "id": "VtrGSumv",
-    "block": "[[[10,\"input\"],[15,1,[29,[\"input-\",[30,1]]]],[15,3,[29,[[30,1]]]],[15,2,[30,3]],[15,4,[30,2]],[12],[13],[1,\"\\n\"],[11,\"button\"],[24,0,\"js-update-objective-button\"],[24,4,\"button\"],[4,[38,0],[[30,0],\"update\",[30,4],[30,1]],null],[12],[1,\"\\n  Save\\n\"],[13]],[\"@inputName\",\"@inputType\",\"@inputValue\",\"@recordId\"],false,[\"action\"]]",
+    "id": "qAplk6TI",
+    "block": "[[[1,[28,[35,0],null,[[\"type\",\"name\",\"value\"],[[30,1],[30,2],[30,3]]]]],[1,\"\\n\"],[11,\"button\"],[24,0,\"js-update-objective-button\"],[24,4,\"button\"],[4,[38,1],[[30,0],\"update\",[30,4],[30,2],[30,3]],null],[12],[1,\"\\n  Save\\n\"],[13]],[\"@inputType\",\"@inputName\",\"@inputValue\",\"@recordId\"],false,[\"input\",\"action\"]]",
     "moduleName": "objective-manager-frontend/components/property-editor.hbs",
     "isStrictMode": false
   });
@@ -143,9 +173,9 @@
   var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, _component.default.extend({
     store: (0, _service.inject)(),
     actions: {
-      update(recordId, name) {
+      update(recordId, name, value) {
         this.store.findRecord('objective', recordId).then(function (objective) {
-          objective[name] = 'Fail to get your value';
+          objective[name] = value;
           objective.save();
         });
       }
@@ -629,8 +659,8 @@
   0; //eaimeta@70e063a35619d71f0,"@ember/template-factory"eaimeta@70e063a35619d71f
 
   var _default = (0, _templateFactory.createTemplateFactory)({
-    "id": "BlW5ipzr",
-    "block": "[[[10,\"h1\"],[12],[1,\"Objective manager\"],[13],[1,\"\\n\\n\"],[1,[34,0]],[1,\"\\n\\n\"],[10,\"table\"],[14,0,\"objective-table\"],[12],[1,\"\\n  \"],[10,\"thead\"],[12],[1,\"\\n    \"],[10,\"th\"],[12],[1,\"Title\"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\"Weight\"],[13],[1,\"\\n  \"],[13],[1,\"\\n\\n  \"],[10,\"tbody\"],[12],[1,\"\\n\"],[42,[28,[37,2],[[28,[37,2],[[30,1]],null]],null],null,[[[1,\"      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"td\"],[14,0,\"js-objective-title\"],[12],[1,\"\\n          \"],[1,[28,[35,3],null,[[\"inputType\",\"inputName\",\"inputValue\",\"recordId\"],[\"text\",\"title\",[30,2,[\"title\"]],[30,2,[\"id\"]]]]]],[1,\"\\n        \"],[13],[1,\"\\n        \"],[10,\"td\"],[14,0,\"js-objective-weight\"],[12],[1,\"\\n          \"],[1,[28,[35,3],null,[[\"inputType\",\"inputName\",\"inputValue\",\"recordId\"],[\"number\",\"weight\",[30,2,[\"weight\"]],[30,2,[\"id\"]]]]]],[1,\"\\n        \"],[13],[1,\"\\n      \"],[13],[1,\"\\n\"]],[2]],null],[1,\"  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\"]],[\"@model\",\"objective\"],false,[\"add-button\",\"each\",\"-track-array\",\"property-editor\"]]",
+    "id": "f/P1WNsG",
+    "block": "[[[10,\"h1\"],[12],[1,\"Objective manager\"],[13],[1,\"\\n\\n\"],[1,[34,0]],[1,\"\\n\\n\"],[10,\"table\"],[14,0,\"objective-table\"],[12],[1,\"\\n  \"],[10,\"thead\"],[12],[1,\"\\n    \"],[10,\"th\"],[12],[1,\"Title\"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\"Weight\"],[13],[1,\"\\n  \"],[13],[1,\"\\n\\n  \"],[10,\"tbody\"],[12],[1,\"\\n\"],[42,[28,[37,2],[[28,[37,2],[[30,1]],null]],null],null,[[[1,\"      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"td\"],[14,0,\"js-objective-title\"],[12],[1,\"\\n          \"],[1,[28,[35,3],null,[[\"inputType\",\"inputName\",\"inputValue\",\"recordId\"],[\"text\",\"title\",[30,2,[\"title\"]],[30,2,[\"id\"]]]]]],[1,\"\\n        \"],[13],[1,\"\\n        \"],[10,\"td\"],[14,0,\"js-objective-weight\"],[12],[1,\"\\n          \"],[1,[28,[35,3],null,[[\"inputType\",\"inputName\",\"inputValue\",\"recordId\"],[\"number\",\"weight\",[30,2,[\"weight\"]],[30,2,[\"id\"]]]]]],[1,\"\\n        \"],[13],[1,\"\\n        \"],[10,\"td\"],[12],[1,\"\\n          \"],[1,[28,[35,4],null,[[\"recordId\"],[[30,2,[\"id\"]]]]]],[1,\"\\n        \"],[13],[1,\"\\n      \"],[13],[1,\"\\n\"]],[2]],null],[1,\"  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\"]],[\"@model\",\"objective\"],false,[\"add-button\",\"each\",\"-track-array\",\"property-editor\",\"delete-button\"]]",
     "moduleName": "objective-manager-frontend/templates/application.hbs",
     "isStrictMode": false
   });
@@ -716,7 +746,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("objective-manager-frontend/app")["default"].create({"name":"objective-manager-frontend","version":"0.0.0+7bba1b0a"});
+            require("objective-manager-frontend/app")["default"].create({"name":"objective-manager-frontend","version":"0.0.0+10dc5e99"});
           }
         
 //# sourceMappingURL=objective-manager-frontend.map

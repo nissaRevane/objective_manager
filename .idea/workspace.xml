@@ -3,6 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="63681374-86bb-4e3f-8760-8b254d474501" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objective-manager-frontend/dist/assets/chunk.app.b183697e92fd9016e061.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objective-manager-frontend/dist/assets/chunk.app.e1d632300d4fd5237120.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objective-manager-frontend/dist/assets/chunk.tests.18eab98360f02ce80130.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objective-manager-frontend/dist/assets/chunk.vendors-node_modules_ember-welcome-page_dist_components_welcome-page_js-node_modules_jquery_d-9ab36e.62aad9b53c6e81811e93.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objective-manager-frontend/dist/assets/chunk.vendors-node_modules_ember-welcome-page_dist_components_welcome-page_js.3cbe5cf710e2175a58cf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objective-manager-frontend/dist/assets/objective-manager-frontend.js" beforeDir="false" afterPath="$PROJECT_DIR$/objective-manager-frontend/dist/assets/objective-manager-frontend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objective-manager-frontend/dist/assets/objective-manager-frontend.map" beforeDir="false" afterPath="$PROJECT_DIR$/objective-manager-frontend/dist/assets/objective-manager-frontend.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objective-manager-frontend/dist/assets/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/objective-manager-frontend/dist/assets/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objective-manager-frontend/dist/assets/vendor.map" beforeDir="false" afterPath="$PROJECT_DIR$/objective-manager-frontend/dist/assets/vendor.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objective-manager-frontend/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/objective-manager-frontend/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objective-manager-frontend/dist/tests/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/objective-manager-frontend/dist/tests/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objective_manager_api/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/objective_manager_api/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objective_manager_api/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/objective_manager_api/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,7 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/objective-manager-frontend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -33,7 +46,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/objective-manager-frontend/app/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/objective-manager-frontend" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -52,7 +65,14 @@
       <updated>1645209722983</updated>
       <workItem from="1645209724219" duration="4387000" />
       <workItem from="1645256032851" duration="93000" />
-      <workItem from="1645425265885" duration="15436000" />
+      <workItem from="1645425265885" duration="15600000" />
+      <workItem from="1645633187246" duration="168000" />
+      <workItem from="1645633357854" duration="14000" />
+      <workItem from="1645633387893" duration="11000" />
+      <workItem from="1645633401603" duration="24000" />
+      <workItem from="1645633427634" duration="8000" />
+      <workItem from="1645633440869" duration="38000" />
+      <workItem from="1645633502473" duration="34000" />
     </task>
     <servers />
   </component>

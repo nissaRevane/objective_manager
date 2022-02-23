@@ -1,13 +1,8 @@
-<input
-  id="input-{{@inputName}}"
-  type={{@inputType}}
-  name='{{@inputName}}'
-  value={{@inputValue}}
->
+{{input type=@inputType name=@inputName value=@inputValue}}
 <button
   class='js-update-objective-button'
   type="button"
-  {{action "update" @recordId @inputName}}
+  {{action "update" @recordId @inputName @inputValue}}
 >
   Save
 </button>

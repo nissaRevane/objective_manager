@@ -10,6 +10,6 @@ class Objective < ApplicationRecord
   end
 
   def objective_total_weight
-    Objective.all.pluck(:weight).sum
+    Objective.where.not(id: id).pluck(:weight).sum + weight
   end
 end
